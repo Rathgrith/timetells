@@ -7,7 +7,12 @@
   <meta property="og:description" content="Understanding time cues from static images using TICL."/>
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <style>
+    .narrow-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
   <title>Academic Project Page</title>
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -69,8 +74,8 @@
   </section>
 
   <section class="section">
-    <div class="container">
-      <h2 class="title is-3">Dataset</h2>
+    <div class="narrow-container">
+      <h2 class="title is-3">📕Dataset</h2>
       <figure>
         <img src="static/images/TOC_dataset.png" alt="Dataset Overview">
         <!-- <figcaption><strong>Dataset Overview:</strong> A sample distribution of timestamps in our dataset.</figcaption> -->
@@ -80,46 +85,48 @@
   </section>
 
   <section class="section">
-    <div class="container">
-      <h2 class="title is-3">Methodology</h2>
+    <div class="narrow-container">
+      <h2 class="title is-3">✍Methodology</h2>
       <figure>
         <img src="static/images/method.png" alt="Methodology Overview">
         <!-- <figcaption><strong>Methodology:</strong> The architecture of TICL for learning time-related visual features.</figcaption> -->
       </figure>
       <p>Our proposed method, Time-Image Contrastive Learning (TICL), employs a cross-modal contrastive learning framework. Intuitively, time correlates to many of the metaphysical concepts that can be described in natural languages, this have motivated us to align CLIP image embeddings with our clock timestamp representations, allowing our model to learn time-related patterns from rich visual semantical features. The indirect correlations inherited from CLIP have help our method to outperform previous methods taking raw geolocation/date metadata <em>(directly time-related!)</em> as additional inputs.</p>
+      <figure>
+        <img src="static/images/pretext.gif" alt="Time Estimation">
+      </figure>
+    </div>
+  </section>
 
+  
+  <section class="section">
+    <div class="narrow-container">
+      <h2 class="title is-3">🔍Downstream: Time-based Image Retrieval</h2>
+      <figure>
+        <img src="static/images/retrieval.gif" alt="Time-based Image Retrieval">
+        <figcaption>As an extension to the pretext task, the results show that TICL retrieves a higher percentage of images with smaller time errors compared to other features under zero-shot nearest-neighbour retrieval.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <h2 class="title is-3">Visual Results</h2>
-      <div class="columns is-multiline">
-        <div class="column is-half">
-          <figure>
-            <img src="static/images/time_esti.png" alt="Time Estimation">
-            <figcaption><strong> Pretext Time Estimation task:</strong> Predicting time-of-day from static images.</figcaption>
-          </figure>
-        </div>
-        <div class="column is-half">
-          <figure>
-            <img src="static/images/vsc.png" alt="Video Scene Classification">
-            <figcaption><strong>Video Scene Classification:</strong> Understanding time-related video context.</figcaption>
-          </figure>
-        </div>
-        <div class="column is-half">
-          <figure>
-            <img src="static/images/retrieval.png" alt="Time-based Image Retrieval">
-            <figcaption><strong>Image Retrieval:</strong> Finding images based on time similarity.</figcaption>
-          </figure>
-        </div>
-        <div class="column is-half">
-          <figure>
-            <img src="static/images/image_editing.png" alt="Time-aware Image Editing">
-            <figcaption><strong>Image Editing:</strong> Modifying images based on inferred time cues.</figcaption>
-          </figure>
-        </div>
-      </div>
+    <div class="narrow-container">
+      <h2 class="title is-3">🏞️Downstream: Video Scene Classification</h2>
+      <figure>
+        <img src="static/images/vsc.gif" alt="Video Scene Classification">
+        <figcaption> Supported by an intuition about how time correlates with scene contexts (see t-SNE and text probabilities in the figure for evidence.), our model understanding time-related visual contexts can improve video scene classification task as we proved in various datasets.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="narrow-container">
+      <h2 class="title is-3">🌅Downstream: Time-aware Image Editing</h2>
+      <figure>
+        <img src="static/images/editing.gif" alt="Time-aware Image Editing">
+        <figcaption>Our model also creates an visually related representation for different clock times throughout the day, therefore we can use the representation to guide the image editing task to create more images with more reasonable illuminations. The experiment results in the figure spans baseline editing methods on GAN and Diffusion models.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -132,6 +139,12 @@
 </section>
 <!--End BibTex citation -->
 
+<section class="section" id="acknowledgements">
+  <div class="container is-max-desktop content">
+    <h3 class="title">🙏 Acknowledgements</h3>
+    TBD
+  </div>
+</section>
 
   <footer class="footer">
   <div class="container">
