@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Exploring time-awareness in static images through contrastive learning.">
-  <meta property="og:title" content="What Time Tells Us?"/>
-  <meta property="og:description" content="Understanding time cues from static images using TICL."/>
+  <meta property="og:title" content="What Time Tells Us?" />
+  <meta property="og:description" content="Understanding time cues from static images using TICL." />
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -12,49 +13,94 @@
       max-width: 900px;
       margin: 0 auto;
     }
+
+    .link-block {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 4px 8px;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      /* Position it above the link */
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      /* Prevent text from wrapping */
+    }
+
+    /* Add an arrow to the tooltip (optional) */
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+
+    /* Show the tooltip on hover */
+    .link-block:hover .tooltip {
+      visibility: visible;
+    }
   </style>
   <title>What Time Tells Us?</title>
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 </head>
+
 <body>
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><em>What Time Tells Us?</em> An Explorative Study of Time-Awareness Learned from Static Images</h1>
+            <h1 class="title is-1 publication-title"><em>What Time Tells Us?</em> An Explorative Study of Time-Awareness
+              Learned from Static Images</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://rathgrith.github.io/" target="_blank">Dongheng Lin</a><sup>1,2</sup>,</span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=UJRtTJ0AAAAJ" target="_blank">Han Hu</a><sup>1</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://jianbojiao.com/" target="_blank">Jianbo Jiao</a><sup>1</sup>
-                  </span>
-                  </div>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=UJRtTJ0AAAAJ" target="_blank">Han
+                  Hu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://jianbojiao.com/" target="_blank">Jianbo Jiao</a><sup>1</sup>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup><a href = "https://mix.jianbojiao.com/">The MIx Group, University of Birmingham,</a> <sup>2</sup>UIUC</span>
-                    <!-- <span class="eql-cntrb"><small><br>First Equal Contribution</small></span> -->
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup><a href="https://mix.jianbojiao.com/">The MIx Group, University of
+                  Birmingham,</a> <sup>2</sup>UIUC</span>
+              <!-- <span class="eql-cntrb"><small><br>First Equal Contribution</small></span> -->
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2503.17899" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -64,51 +110,51 @@
                     </a>
                   </span> -->
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/Rathgrith/TICLearning/" target="_blank"
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Rathgrith/TICLearning/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
+                  <span class="tooltip">Code coming soon</span>
                 </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://arxiv.org/abs/2503.17899" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <h2 class="title is-3">Video Presentation</h2>
-        <source src="static/videos/demo_video.mp4"
-        type="video/mp4">
-      </video>
-      <!-- <h2 class="subtitle has-text-centered">
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <h2 class="title is-3">Video Presentation</h2>
+          <source src="static/videos/demo_video.mp4" type="video/mp4">
+        </video>
+        <!-- <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2> -->
+      </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
+  <!-- End teaser video -->
   <!-- </section>
   <section class="hero teaser">
     <div class="container is-max-desktop">
@@ -121,12 +167,17 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Key Takeaways</h2>
-      Time becomes visible through illumination changes in what we see. Inspired by this, in this paper we explore the potential to learn time-of-day awareness from static images, trying to answer: <em>what time tells us?</em> 
+      Time becomes visible through illumination changes in what we see. Inspired by this, in this paper we explore the
+      potential to learn time-of-day awareness from static images, trying to answer: <em>what time tells us?</em>
       <ul class="content">
-        <li><strong>Learning from Static Images:</strong> We train models to understand time-of-day information from single images.</li>
-        <li><strong>Time-Image Contrastive Learning (TICL):</strong> Our approach connects timestamps with visual representations.</li>
-        <li><strong>Strong Pretext Performance:</strong> TICL achieves state-of-the-art results in timestamp estimation.</li>
-        <li><strong>Useful for Various Downstream Tasks:</strong> TICL embeddings improve tasks like time-based retrieval and video classification.</li>
+        <li><strong>Learning from Static Images:</strong> We train models to understand time-of-day information from
+          single images.</li>
+        <li><strong>Time-Image Contrastive Learning (TICL):</strong> Our approach connects timestamps with visual
+          representations.</li>
+        <li><strong>Strong Pretext Performance:</strong> TICL achieves state-of-the-art results in timestamp estimation.
+        </li>
+        <li><strong>Useful for Various Downstream Tasks:</strong> TICL embeddings improve tasks like time-based
+          retrieval and video classification.</li>
       </ul>
     </div>
   </section>
@@ -138,17 +189,21 @@
         <img src="static/images/TOC_dataset.png" alt="Dataset Overview">
         <!-- <figcaption><strong>Dataset Overview:</strong> A sample distribution of timestamps in our dataset.</figcaption> -->
       </figure>
-      <p>We introduce the Time-Oriented Collection (TOC) dataset, which consists of 130,906 images with reliable timestamps verified manually. This dataset enables us to analyze how time-related visual cues can be extracted from static images.</p>
+      <p>We introduce the Time-Oriented Collection (TOC) dataset, which consists of 130,906 images with reliable
+        timestamps verified manually. This dataset enables us to analyze how time-related visual cues can be extracted
+        from static images.</p>
     </div>
   </section>
-  
+
 
   <section class="section">
     <div class="narrow-container">
       <h2 class="title is-3">🔍What time tells us in <em>Time-based Image Retrieval</em>?</h2>
       <figure>
         <img src="static/images/retrieval.gif" alt="Time-based Image Retrieval">
-        <figcaption>As an extension to the pretext task, the results show that TICL retrieves a higher percentage of images with smaller time errors compared to other features under zero-shot nearest-neighbour retrieval.</figcaption>
+        <figcaption>As an extension to the pretext task, the results show that TICL retrieves a higher percentage of
+          images with smaller time errors compared to other features under zero-shot nearest-neighbour retrieval.
+        </figcaption>
       </figure>
     </div>
   </section>
@@ -158,7 +213,9 @@
       <h2 class="title is-3">🏞️What time tells us in <em>Video Scene Classification</em>?</h2>
       <figure>
         <img src="static/images/vsc.gif" alt="Video Scene Classification">
-        <figcaption> Supported by an intuition about how time correlates with scene contexts (see t-SNE and text probabilities in the figure for evidence.), our model understanding time-related visual contexts can improve video scene classification task as we proved in various datasets.</figcaption>
+        <figcaption> Supported by an intuition about how time correlates with scene contexts (see t-SNE and text
+          probabilities in the figure for evidence.), our model understanding time-related visual contexts can improve
+          video scene classification task as we proved in various datasets.</figcaption>
       </figure>
     </div>
   </section>
@@ -169,65 +226,86 @@
       <h2 class="title is-3">🌅What time tells us in <em>Time-aware Image Editing</em>?</h2>
       <figure>
         <img src="static/images/editing.gif" alt="Time-aware Image Editing">
-        <figcaption>Our model also creates an visually related representation for different clock times throughout the day, therefore we can use the representation to guide the image editing task to create more images with more reasonable illuminations. The experiment results in the figure spans baseline editing methods on GAN and Diffusion models.</figcaption>
+        <figcaption>Our model also creates an visually related representation for different clock times throughout the
+          day, therefore we can use the representation to guide the image editing task to create more images with more
+          reasonable illuminations. The experiment results in the figure spans baseline editing methods on GAN and
+          Diffusion models.</figcaption>
       </figure>
     </div>
   </section>
 
 
-<section class="section">
-  <div class="narrow-container">
-    <h2 class="title is-3">✍Methodology on Pretext Estimation Task</h2>
-    <figure>
-      <img src="static/images/method.png" alt="Methodology Overview">
-      <!-- <figcaption><strong>Methodology:</strong> The architecture of TICL for learning time-related visual features.</figcaption> -->
-    </figure>
-    <p>Our proposed method, Time-Image Contrastive Learning (TICL), employs a cross-modal contrastive learning framework. Intuitively, time correlates to many of the metaphysical concepts that can be described in natural languages, this have motivated us to align CLIP image embeddings with our clock timestamp representations, allowing our model to learn time-related patterns from rich visual semantical features. The indirect correlations inherited from CLIP have help our method to outperform previous methods taking raw geolocation/date metadata <em>(directly time-related!)</em> as additional inputs.</p>
-    <figure>
-      <img src="static/images/pretext.gif" alt="Time Estimation">
-    </figure>
-  </div>
-</section>
+  <section class="section">
+    <div class="narrow-container">
+      <h2 class="title is-3">✍Methodology on Pretext Estimation Task</h2>
+      <figure>
+        <img src="static/images/method.png" alt="Methodology Overview">
+        <!-- <figcaption><strong>Methodology:</strong> The architecture of TICL for learning time-related visual features.</figcaption> -->
+      </figure>
+      <p>Our proposed method, Time-Image Contrastive Learning (TICL), employs a cross-modal contrastive learning
+        framework. Intuitively, time correlates to many of the metaphysical concepts that can be described in natural
+        languages, this have motivated us to align CLIP image embeddings with our clock timestamp representations,
+        allowing our model to learn time-related patterns from rich visual semantical features. The indirect
+        correlations inherited from CLIP have help our method to outperform previous methods taking raw geolocation/date
+        metadata <em>(directly time-related!)</em> as additional inputs.</p>
+      <figure>
+        <img src="static/images/pretext.gif" alt="Time Estimation">
+      </figure>
+    </div>
+  </section>
 
-<section class="section" id="acknowledgements">
-  <div class="container is-max-desktop content">
-    <h3 class="title">🙏 Acknowledgements</h3>
-    TBD
-  </div>
-</section>
+  <section class="section" id="acknowledgements">
+    <div class="container is-max-desktop content">
+      <h3 class="title">🙏 Acknowledgements</h3>
+      TBD
+    </div>
+  </section>
 
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>BibTex Code Here</code></pre>
-  </div>
-</section>
-<!--End BibTex citation -->
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{lin2025timetellsusexplorative,
+        title={What Time Tells Us? An Explorative Study of Time Awareness Learned from Static Images}, 
+        author={Dongheng Lin and Han Hu and Jianbo Jiao},
+        year={2025},
+        eprint={2503.17899},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2503.17899}, 
+  }</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
